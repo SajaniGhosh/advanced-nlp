@@ -1,0 +1,19 @@
+pip packages:
+    pandas
+    seaborn
+    matplotlib
+    numpy
+    transformers
+    datasets
+    seqeval
+    evaluate
+    torch
+    IPython
+    random
+    sklearn
+    csv
+    spacy
+    joblib
+    matplotlib.pyplot
+
+Also, run "python -m spacy download en_core_web_md"
