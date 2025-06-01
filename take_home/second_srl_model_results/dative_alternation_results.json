@@ -1,0 +1,766 @@
+[
+  {
+    "id": "da_001",
+    "capability": "Dative Alternation (Ditransitive Verbs)",
+    "description": "Checks if the model identifies recipient/goal (ARG2) in prepositional dative and double-object constructions.",
+    "total_alternation_pairs": 10,
+    "failures_in_alternation_pairs": 7,
+    "type_1_failures": 2,
+    "type_1_failure_rate": "20.00%",
+    "type_2_failures": 7,
+    "type_2_failure_rate": "70.00%",
+    "failure_rate_percent": "70.00%",
+    "test_cases": [
+      {
+        "sentence_prep": [
+          "She",
+          "gave",
+          "a",
+          "book",
+          "to",
+          "him",
+          "."
+        ],
+        "predicate_mask_prep": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "She",
+          "gave",
+          "him",
+          "a",
+          "book",
+          "."
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "ARG0",
+          "V",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "ARG0",
+          "V",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "false"
+      },
+      {
+        "sentence_prep": [
+          "He",
+          "sent",
+          "a",
+          "letter",
+          "to",
+          "her",
+          "."
+        ],
+        "predicate_mask_prep": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "He",
+          "sent",
+          "her",
+          "a",
+          "letter",
+          "."
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "ARG0",
+          "V",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "ARG0",
+          "V",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "false"
+      },
+      {
+        "sentence_prep": [
+          "The",
+          "teacher",
+          "read",
+          "a",
+          "story",
+          "to",
+          "the",
+          "children",
+          "."
+        ],
+        "predicate_mask_prep": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "The",
+          "teacher",
+          "read",
+          "the",
+          "children",
+          "a",
+          "story",
+          "."
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_prep": [
+          "They",
+          "offered",
+          "help",
+          "to",
+          "the",
+          "newcomers",
+          "."
+        ],
+        "predicate_mask_prep": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "They",
+          "offered",
+          "the",
+          "newcomers",
+          "help",
+          "."
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_prep": [
+          "I",
+          "bought",
+          "flowers",
+          "for",
+          "my",
+          "mother",
+          "."
+        ],
+        "predicate_mask_prep": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "I",
+          "bought",
+          "my",
+          "mother",
+          "flowers",
+          "."
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_prep": [
+          "Could",
+          "you",
+          "pass",
+          "the",
+          "salt",
+          "to",
+          "me",
+          "?"
+        ],
+        "predicate_mask_prep": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "Could",
+          "you",
+          "pass",
+          "me",
+          "the",
+          "salt",
+          "?"
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "ARGM-MOD",
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "ARGM-MOD",
+          "ARG0",
+          "V",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_prep": [
+          "The",
+          "company",
+          "donated",
+          "books",
+          "to",
+          "the",
+          "library",
+          "."
+        ],
+        "predicate_mask_prep": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "O",
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "The",
+          "company",
+          "donated",
+          "the",
+          "library",
+          "books",
+          "."
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "O",
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_prep": [
+          "She",
+          "cooked",
+          "dinner",
+          "for",
+          "her",
+          "family",
+          "."
+        ],
+        "predicate_mask_prep": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "She",
+          "cooked",
+          "her",
+          "family",
+          "dinner",
+          "."
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_prep": [
+          "He",
+          "told",
+          "a",
+          "joke",
+          "to",
+          "the",
+          "audience",
+          "."
+        ],
+        "predicate_mask_prep": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "He",
+          "told",
+          "the",
+          "audience",
+          "a",
+          "joke",
+          "."
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "false"
+      },
+      {
+        "sentence_prep": [
+          "Please",
+          "hand",
+          "the",
+          "document",
+          "to",
+          "me",
+          "."
+        ],
+        "predicate_mask_prep": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_prep": [
+          "O",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_double_obj": [
+          "Please",
+          "hand",
+          "me",
+          "the",
+          "document",
+          "."
+        ],
+        "predicate_mask_double_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_double_obj": [
+          "O",
+          "V",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_prep": [
+          "ARGM-DIS",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_double_obj": [
+          "ARGM-DIS",
+          "V",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "failure": "true"
+      }
+    ]
+  }
+]

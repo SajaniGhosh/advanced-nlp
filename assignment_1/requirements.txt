@@ -1,0 +1,9 @@
+pip packages:
+    spacy
+    sklearn
+    joblib
+    pandas
+    seaborn
+    matplotlib.pyplot
+
+Also, run "python -m spacy download en_core_web_md"

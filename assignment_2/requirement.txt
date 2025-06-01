@@ -1,0 +1,14 @@
+pip packages:
+    pandas
+    seaborn
+    matplotlib
+    numpy
+    transformers
+    datasets
+    seqeval
+    evaluate
+    torch
+    IPython
+    random
+    sklearn
+    csv

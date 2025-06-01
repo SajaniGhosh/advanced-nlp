@@ -1,0 +1,89 @@
+[
+  {
+    "id": "ci_001",
+    "capability": "Causative/Inchoative Alternation",
+    "description": "Checks if the model identifies agent (ARG0) and theme (ARG1) in transitive (causative) and intransitive (inchoative) forms.",
+    "test_cases": [
+      {
+        "sentence_causative": ["John", "broke", "the", "vase", "."],
+        "predicate_mask_causative": [0, 1, 0, 0, 0],
+        "expected_roles_causative": ["ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "vase", "broke", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      },
+      {
+        "sentence_causative": ["The", "sun", "melted", "the", "ice", "."],
+        "predicate_mask_causative": [0, 0, 1, 0, 0, 0],
+        "expected_roles_causative": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "ice", "melted", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      },
+      {
+        "sentence_causative": ["She", "opened", "the", "door", "."],
+        "predicate_mask_causative": [0, 1, 0, 0, 0],
+        "expected_roles_causative": ["ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "door", "opened", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      },
+      {
+        "sentence_causative": ["The", "chef", "cooked", "the", "meal", "."],
+        "predicate_mask_causative": [0, 0, 1, 0, 0, 0],
+        "expected_roles_causative": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "meal", "cooked", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      },
+      {
+        "sentence_causative": ["The", "heat", "expanded", "the", "metal", "."],
+        "predicate_mask_causative": [0, 0, 1, 0, 0, 0],
+        "expected_roles_causative": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "metal", "expanded", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      },
+      {
+        "sentence_causative": ["He", "closed", "the", "book", "."],
+        "predicate_mask_causative": [0, 1, 0, 0, 0],
+        "expected_roles_causative": ["ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "book", "closed", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      },
+      {
+        "sentence_causative": ["The", "explosion", "shook", "the", "building", "."],
+        "predicate_mask_causative": [0, 0, 1, 0, 0, 0],
+        "expected_roles_causative": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "building", "shook", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      },
+      {
+        "sentence_causative": ["The", "doctor", "healed", "the", "patient", "."],
+        "predicate_mask_causative": [0, 0, 1, 0, 0, 0],
+        "expected_roles_causative": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "patient", "healed", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      },
+      {
+        "sentence_causative": ["The", "strong", "current", "sank", "the", "boat", "."],
+        "predicate_mask_causative": [0, 0, 0, 1, 0, 0, 0],
+        "expected_roles_causative": ["O", "O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "boat", "sank", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      },
+      {
+        "sentence_causative": ["The", "cold", "weather", "froze", "the", "pipes", "."],
+        "predicate_mask_causative": [0, 0, 0, 1, 0, 0, 0],
+        "expected_roles_causative": ["O", "O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_inchoative": ["The", "pipes", "froze", "."],
+        "predicate_mask_inchoative": [0, 0, 1, 0],
+        "expected_roles_inchoative": ["O", "ARG1", "V", "O"]
+      }
+    ]
+  }
+]

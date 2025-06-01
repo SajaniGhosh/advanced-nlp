@@ -1,0 +1,89 @@
+[
+  {
+    "id": "tmp_001",
+    "capability": "Temporal Adverbial Fronting/Backing (ARGM-TMP)",
+    "description": "Tests if the model consistently assigns the ARGM-TMP role to temporal expressions regardless of their position (fronted or at the end).",
+    "test_cases": [
+      {
+        "sentence_fronted": ["Yesterday", ",", "she", "finished", "her", "work", "."],
+        "predicate_mask_fronted": [0, 0, 0, 1, 0, 0, 0],
+        "expected_roles_fronted": ["ARGM-TMP", "O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_backed": ["She", "finished", "her", "work", "yesterday", "."],
+        "predicate_mask_backed": [0, 1, 0, 0, 0, 0],
+        "expected_roles_backed": ["ARG0", "V", "O", "ARG1", "ARGM-TMP", "O"]
+      },
+      {
+        "sentence_fronted": ["In", "the", "morning", ",", "he", "read", "the", "newspaper", "."],
+        "predicate_mask_fronted": [0, 0, 0, 0, 0, 1, 0, 0, 0],
+        "expected_roles_fronted": ["O", "O", "ARGM-TMP", "O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_backed": ["He", "read", "the", "newspaper", "in", "the", "morning", "."],
+        "predicate_mask_backed": [0, 1, 0, 0, 0, 0, 0, 0],
+        "expected_roles_backed": ["ARG0", "V", "O", "ARG1", "O", "O", "ARGM-TMP", "O"]
+      },
+      {
+        "sentence_fronted": ["Last", "week", ",", "they", "visited", "Paris", "."],
+        "predicate_mask_fronted": [0, 0, 0, 0, 1, 0, 0],
+        "expected_roles_fronted": ["O", "ARGM-TMP", "O", "ARG0", "V", "ARG1", "O"],
+        "sentence_backed": ["They", "visited", "Paris", "last", "week", "."],
+        "predicate_mask_backed": [0, 1, 0, 0, 0, 0],
+        "expected_roles_backed": ["ARG0", "V", "ARG1", "O", "ARGM-TMP", "O"]
+      },
+      {
+        "sentence_fronted": ["Before", "noon", ",", "the", "meeting", "concluded", "."],
+        "predicate_mask_fronted": [0, 0, 0, 0, 0, 1, 0],
+        "expected_roles_fronted": ["O", "ARGM-TMP", "O", "O", "ARG1", "V", "O"],
+        "sentence_backed": ["The", "meeting", "concluded", "before", "noon", "."],
+        "predicate_mask_backed": [0, 0, 1, 0, 0, 0],
+        "expected_roles_backed": ["O", "ARG1", "V", "O", "ARGM-TMP", "O"]
+      },
+      {
+        "sentence_fronted": ["Every", "day", ",", "she", "exercises", "."],
+        "predicate_mask_fronted": [0, 0, 0, 0, 1, 0],
+        "expected_roles_fronted": ["O", "ARGM-TMP", "O", "ARG0", "V", "O"],
+        "sentence_backed": ["She", "exercises", "every", "day", "."],
+        "predicate_mask_backed": [0, 1, 0, 0, 0],
+        "expected_roles_backed": ["ARG0", "V", "O", "ARGM-TMP", "O"]
+      },
+      {
+        "sentence_fronted": ["Since", "morning", ",", "it", "has", "been", "raining", "."],
+        "predicate_mask_fronted": [0, 0, 0, 0, 0, 0, 1, 0],
+        "expected_roles_fronted": ["O", "ARGM-TMP", "O", "ARG0", "O", "O", "V", "O"],
+        "sentence_backed": ["It", "has", "been", "raining", "since", "morning", "."],
+        "predicate_mask_backed": [0, 0, 0, 1, 0, 0, 0],
+        "expected_roles_backed": ["ARG0", "O", "O", "V", "O", "ARGM-TMP", "O"]
+      },
+      {
+        "sentence_fronted": ["After", "dinner", ",", "they", "watched", "a", "movie", "."],
+        "predicate_mask_fronted": [0, 0, 0, 0, 1, 0, 0, 0],
+        "expected_roles_fronted": ["O", "ARGM-TMP", "O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_backed": ["They", "watched", "a", "movie", "after", "dinner", "."],
+        "predicate_mask_backed": [0, 1, 0, 0, 0, 0, 0],
+        "expected_roles_backed": ["ARG0", "V", "O", "ARG1", "O", "ARGM-TMP", "O"]
+      },
+      {
+        "sentence_fronted": ["Now", ",", "we", "can", "begin", "the", "meeting", "."],
+        "predicate_mask_fronted": [0, 0, 0, 0, 1, 0, 0, 0],
+        "expected_roles_fronted": ["ARGM-TMP", "O", "ARG0", "ARGM-MOD", "V", "O", "ARG1", "O"],
+        "sentence_backed": ["We", "can", "begin", "the", "meeting", "now", "."],
+        "predicate_mask_backed": [0, 0, 1, 0, 0, 0],
+        "expected_roles_backed": ["ARG0", "ARGM-MOD", "V", "O", "ARG1", "ARGM-TMP", "O"]
+      },
+      {
+        "sentence_fronted": ["By", "next", "month", ",", "the", "project", "will", "be", "finished", "."],
+        "predicate_mask_fronted": [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+        "expected_roles_fronted": ["O", "O", "ARGM-TMP", "O", "O", "ARG1", "ARGM-MOD", "O", "V", "O"],
+        "sentence_backed": ["The", "project", "will", "be", "finished", "by", "next", "month", "."],
+        "predicate_mask_backed": [0, 0, 0, 0, 1, 0, 0, 0, 0],
+        "expected_roles_backed": ["O", "ARG1", "ARGM-MOD", "O", "V", "O", "O", "ARGM-TMP", "O"]
+      },
+      {
+        "sentence_fronted": ["Soon", ",", "the", "train", "will", "arrive", "."],
+        "predicate_mask_fronted": [0, 0, 0, 0, 0, 1, 0],
+        "expected_roles_fronted": ["ARGM-TMP", "O", "O", "ARG1", "ARGM-MOD", "V", "O"],
+        "sentence_backed": ["The", "train", "will", "arrive", "soon", "."],
+        "predicate_mask_backed": [0, 0, 0, 1, 0, 0],
+        "expected_roles_backed": ["O", "ARG1", "ARGM-MOD", "V", "ARGM-TMP", "O"]
+      }
+    ]
+  }
+]

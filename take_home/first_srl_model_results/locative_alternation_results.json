@@ -1,0 +1,794 @@
+[
+  {
+    "id": "la_001",
+    "capability": "Locative Alternation",
+    "description": "Verifies accurate assignment of theme (ARG1) and location (ARGM-LOC or ARG2) roles regardless of syntactic position.",
+    "total_alternation_pairs": 10,
+    "failures_in_alternation_pairs": 10,
+    "type_1_failures": 10,
+    "type_1_failure_rate": "100.00%",
+    "type_2_failures": 9,
+    "type_2_failure_rate": "90.00%",
+    "failure_rate_percent": "100.00%",
+    "test_cases": [
+      {
+        "sentence_loc_obj": [
+          "She",
+          "loaded",
+          "the",
+          "truck",
+          "with",
+          "hay",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "She",
+          "loaded",
+          "the",
+          "hay",
+          "onto",
+          "the",
+          "truck",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "O",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "O",
+          "O",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_loc_obj": [
+          "He",
+          "sprayed",
+          "the",
+          "wall",
+          "with",
+          "paint",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "He",
+          "sprayed",
+          "paint",
+          "on",
+          "the",
+          "wall",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_loc_obj": [
+          "The",
+          "farmers",
+          "planted",
+          "the",
+          "field",
+          "with",
+          "corn",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "The",
+          "farmers",
+          "planted",
+          "corn",
+          "in",
+          "the",
+          "field",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARGM-TMP",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARGM-TMP",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_loc_obj": [
+          "She",
+          "poured",
+          "water",
+          "into",
+          "the",
+          "glass",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "She",
+          "poured",
+          "the",
+          "glass",
+          "with",
+          "water",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "O",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARGM-TMP",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "O",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARGM-TMP",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_loc_obj": [
+          "He",
+          "filled",
+          "the",
+          "bucket",
+          "with",
+          "sand",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "He",
+          "filled",
+          "sand",
+          "into",
+          "the",
+          "bucket",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "O",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "O",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_loc_obj": [
+          "They",
+          "covered",
+          "the",
+          "table",
+          "with",
+          "a",
+          "cloth",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "They",
+          "covered",
+          "a",
+          "cloth",
+          "on",
+          "the",
+          "table",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "O",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "O",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_loc_obj": [
+          "Workers",
+          "cleaned",
+          "the",
+          "floor",
+          "with",
+          "mops",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "Workers",
+          "cleaned",
+          "mops",
+          "on",
+          "the",
+          "floor",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "O",
+          "O",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "O",
+          "O",
+          "ARG1",
+          "O",
+          "O",
+          "O",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_loc_obj": [
+          "He",
+          "sprinkled",
+          "the",
+          "doughnuts",
+          "with",
+          "sugar",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "He",
+          "sprinkled",
+          "sugar",
+          "on",
+          "the",
+          "doughnuts",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "O",
+          "O",
+          "O",
+          "O",
+          "O",
+          "O",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "O",
+          "O",
+          "O",
+          "O",
+          "O",
+          "O",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_loc_obj": [
+          "They",
+          "planted",
+          "the",
+          "road",
+          "with",
+          "trees",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "They",
+          "planted",
+          "trees",
+          "along",
+          "the",
+          "road",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "ARG0",
+          "V",
+          "O",
+          "ARG1",
+          "O",
+          "ARGM-TMP",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARGM-TMP",
+          "O"
+        ],
+        "failure": "true"
+      },
+      {
+        "sentence_loc_obj": [
+          "The",
+          "gardener",
+          "sowed",
+          "the",
+          "garden",
+          "with",
+          "seeds",
+          "."
+        ],
+        "predicate_mask_loc_obj": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_loc_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "O",
+          "ARG2",
+          "O",
+          "ARG1",
+          "O"
+        ],
+        "sentence_theme_obj": [
+          "The",
+          "gardener",
+          "sowed",
+          "seeds",
+          "in",
+          "the",
+          "garden",
+          "."
+        ],
+        "predicate_mask_theme_obj": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_roles_theme_obj": [
+          "O",
+          "ARG0",
+          "V",
+          "ARG1",
+          "O",
+          "O",
+          "ARG2",
+          "O"
+        ],
+        "predicted_roles_loc_obj": [
+          "O",
+          "ARG0",
+          "O",
+          "O",
+          "O",
+          "O",
+          "ARGM-TMP",
+          "O"
+        ],
+        "predicted_roles_theme_obj": [
+          "O",
+          "ARG0",
+          "O",
+          "O",
+          "O",
+          "O",
+          "ARGM-TMP",
+          "O"
+        ],
+        "failure": "true"
+      }
+    ]
+  }
+]
