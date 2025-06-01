@@ -1,0 +1,89 @@
+[
+  {
+    "id": "ap_001",
+    "capability": "Active/Passive Voice Alternation",
+    "description": "Tests if the model assigns correct thematic roles regardless of active or passive voice.",
+    "test_cases": [
+      {
+        "sentence_active": ["The", "dog", "chased", "the", "ball", "."],
+        "predicate_mask_active": [0, 0, 1, 0, 0, 0],
+        "expected_roles_active": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_passive": ["The", "ball", "was", "chased", "by", "the", "dog", "."],
+        "predicate_mask_passive": [0, 0, 0, 1, 0, 0, 0, 0],
+        "expected_roles_passive": ["O", "ARG1", "O", "V", "O", "O", "ARG0", "O"]
+      },
+      {
+        "sentence_active": ["Anna", "loves", "Benjamin", "."],
+        "predicate_mask_active": [0, 1, 0, 0],
+        "expected_roles_active": ["ARG0", "V", "ARG1", "O"],
+        "sentence_passive": ["Benjamin", "is", "loved", "by", "Anna", "."],
+        "predicate_mask_passive": [0, 0, 1, 0, 0, 0],
+        "expected_roles_passive": ["ARG1", "O", "V", "O", "ARG0", "O"]
+      },
+      {
+        "sentence_active": ["The", "wind", "opened", "the", "window", "."],
+        "predicate_mask_active": [0, 0, 1, 0, 0, 0],
+        "expected_roles_active": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_passive": ["The", "window", "was", "opened", "by", "the", "wind", "."],
+        "predicate_mask_passive": [0, 0, 0, 1, 0, 0, 0, 0],
+        "expected_roles_passive": ["O", "ARG1", "O", "V", "O", "O", "ARG0", "O"]
+      },
+      {
+        "sentence_active": ["The", "boy", "kicked", "the", "can", "."],
+        "predicate_mask_active": [0, 0, 1, 0, 0, 0],
+        "expected_roles_active": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_passive": ["The", "can", "was", "kicked", "by", "the", "boy", "."],
+        "predicate_mask_passive": [0, 0, 0, 1, 0, 0, 0, 0],
+        "expected_roles_passive": ["O", "ARG1", "O", "V", "O", "O", "ARG0", "O"]
+      },
+      {
+        "sentence_active": ["Scientists", "discovered", "a", "new", "planet", "."],
+        "predicate_mask_active": [0, 1, 0, 0, 0, 0],
+        "expected_roles_active": ["ARG0", "V", "O", "O", "ARG1", "O"],
+        "sentence_passive": ["A", "new", "planet", "was", "discovered", "by", "scientists", "."],
+        "predicate_mask_passive": [0, 0, 0, 0, 1, 0, 0, 0],
+        "expected_roles_passive": ["O", "O", "ARG1", "O", "V", "O", "ARG0", "O"]
+      },
+      {
+        "sentence_active": ["The", "chef", "prepared", "dinner", "."],
+        "predicate_mask_active": [0, 0, 1, 0, 0],
+        "expected_roles_active": ["O", "ARG0", "V", "ARG1", "O"],
+        "sentence_passive": ["Dinner", "was", "prepared", "by", "the", "chef", "."],
+        "predicate_mask_passive": [0, 0, 1, 0, 0, 0, 0],
+        "expected_roles_passive": ["ARG1", "O", "V", "O", "O", "ARG0", "O"]
+      },
+      {
+        "sentence_active": ["The", "children", "built", "a", "sandcastle", "."],
+        "predicate_mask_active": [0, 0, 1, 0, 0, 0],
+        "expected_roles_active": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_passive": ["A", "sandcastle", "was", "built", "by", "the", "children", "."],
+        "predicate_mask_passive": [0, 0, 0, 1, 0, 0, 0, 0],
+        "expected_roles_passive": ["O", "ARG1", "O", "V", "O", "O", "ARG0", "O"]
+      },
+      {
+        "sentence_active": ["The", "company", "launched", "a", "new", "product", "."],
+        "predicate_mask_active": [0, 0, 1, 0, 0, 0, 0],
+        "expected_roles_active": ["O", "ARG0", "V", "O", "O", "ARG1", "O"],
+        "sentence_passive": ["A", "new", "product", "was", "launched", "by", "the", "company", "."],
+        "predicate_mask_passive": [0, 0, 0, 0, 1, 0, 0, 0, 0],
+        "expected_roles_passive": ["O", "O", "ARG1", "O", "V", "O", "O", "ARG0", "O"]
+      },
+      {
+        "sentence_active": ["Doctors", "recommend", "exercise", "."],
+        "predicate_mask_active": [0, 1, 0, 0],
+        "expected_roles_active": ["ARG0", "V", "ARG1", "O"],
+        "sentence_passive": ["Exercise", "is", "recommended", "by", "doctors", "."],
+        "predicate_mask_passive": [0, 0, 1, 0, 0, 0],
+        "expected_roles_passive": ["ARG1", "O", "V", "O", "ARG0", "O"]
+      },
+      {
+        "sentence_active": ["The", "police", "arrested", "the", "suspect", "."],
+        "predicate_mask_active": [0, 0, 1, 0, 0, 0],
+        "expected_roles_active": ["O", "ARG0", "V", "O", "ARG1", "O"],
+        "sentence_passive": ["The", "suspect", "was", "arrested", "by", "the", "police", "."],
+        "predicate_mask_passive": [0, 0, 0, 1, 0, 0, 0, 0],
+        "expected_roles_passive": ["O", "ARG1", "O", "V", "O", "O", "ARG0", "O"]
+      }
+    ]
+  }
+]
